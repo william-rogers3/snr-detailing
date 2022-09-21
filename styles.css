@@ -1,20 +1,81 @@
+:root {
+    --main-color: #FA8072;
+    --secondary-color: #72ECFA;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
 .links {
+    box-sizing: border-box;
     display: flex;
+    justify-content: center;
     list-style: none;
-    height: 50px;
+    height: 60px;
+    margin-left: 1vw;
 }
 
 .link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     box-sizing: border-box;
-    padding: 20px;
-    height: 50px;
+    padding: 30px;
+    height: 60px;
+    cursor: pointer;
+    transition: background-color .4s;
+    font-size: 24px;
+}
+
+.link:hover {
+    background-color: pink;
 }
 
 a {
+    text-align: center;
     text-decoration: none;
     color: black;
 }
 
+header {
+    background-color: white;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#navbar {
+    display: flex;
+    justify-content: center;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+}
+
+#nav-logo {
+    position: absolute;
+    margin-left: 20vw;
+    cursor: pointer;
+}
+
 #nav-image {
-    height: 50px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.section1 {
+    height: 2000px;
+    background-color: black;
+}
+
+
+
+.home-container {
+    background-image: url(/images/front-hood-buff.jpeg);
+    height: 1000px;
 }
