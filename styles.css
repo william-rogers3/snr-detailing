@@ -1,6 +1,6 @@
 :root {
-    --main-color: #FA8072;
-    --secondary-color: #72ECFA;
+    --main-color: #0B5351;
+    --secondary-color: #530B0D;
 }
 
 * {
@@ -16,6 +16,7 @@
     list-style: none;
     height: 60px;
     margin-left: 1vw;
+    gap: 40px;
 }
 
 .link {
@@ -23,29 +24,34 @@
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    padding: 30px;
+    padding: 20px;
     height: 60px;
+    width: 120px;
     cursor: pointer;
-    transition: background-color .4s;
+    transition: .4s;
     font-size: 24px;
 }
 
 .link:hover {
-    background-color: pink;
+    border-bottom: white 2px solid;
+    margin-top: -2px;
 }
 
 a {
     text-align: center;
     text-decoration: none;
-    color: black;
+    color: white;
+    font-weight: 100;
+    font-family: 'Reem Kufi Fun', sans-serif;
 }
 
 header {
-    background-color: white;
+    background-color: #231F20;
     height: 60px;
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 100vw;
+    z-index: 100;
 }
 
 #navbar {
@@ -53,6 +59,7 @@ header {
     justify-content: center;
     top: 0;
     position: fixed;
+    z-index: 100;
     width: 100%;
     height: 60px;
 }
@@ -61,21 +68,61 @@ header {
     position: absolute;
     margin-left: 20vw;
     cursor: pointer;
+    height: 60px;
+    z-index: 3;
 }
 
 #nav-image {
     height: 60px;
     cursor: pointer;
+
 }
 
 .section1 {
     height: 2000px;
-    background-color: black;
+    background-color: #231F20;
 }
 
 
 
 .home-container {
+    position: relative;
+    margin-top: 60px;
     background-image: url(/images/front-hood-buff.jpeg);
-    height: 1000px;
+    height: 900px;
+}
+
+.home-titles {
+    position: absolute;
+    bottom: 25vh;
+    font-family: 'Reem Kufi Fun', sans-serif;
+
+    font-weight: 300;
+}
+
+#home-slogan {
+    margin-left: 3vw;
+    margin-top: -40px;
+}
+
+#logo {
+    width: 400px;
+}
+
+
+@media only screen and (max-width: 750px) {
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .links {
+        display: none;
+    }
+
+
+    #nav-logo {
+        margin-left: 0;
+    }
 }
