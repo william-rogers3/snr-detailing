@@ -1,5 +1,5 @@
 :root {
-    --main-color: #0B5351;
+    --main-color: #231F20;
     --secondary-color: #530B0D;
 }
 
@@ -45,8 +45,28 @@ a {
     font-family: 'Reem Kufi Fun', sans-serif;
 }
 
+.toggle-button {
+    position: absolute;
+    top: 1.25rem;
+    right: .75rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    z-index: 100;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    transition: all .3s ease-in-out;
+}
+
 header {
-    background-color: #231F20;
+    background-color: var(--main-color);
     height: 60px;
     position: fixed;
     top: 0;
@@ -83,7 +103,7 @@ header {
     position: relative;
     margin-top: 60px;
     background-color: black;
-    background-image: url(/images/front-hood-buff.jpeg);
+    background-image: url(./images/front-hood-buff.jpeg);
     height: 900px;
     opacity: 0;
     transition: .5s;
@@ -125,7 +145,7 @@ header {
     border-radius: 20px;
     border: none;
     color: white;
-    background-color: black;
+    background-color: var(--main-color);
     cursor: pointer;
     font-family: 'Reem Kufi Fun', sans-serif;
     font-weight: 300;
@@ -136,7 +156,7 @@ header {
 
 .home-learn-more:hover {
     background-color: white;
-    color: black;
+    color: var(--main-color);
 }
 
 #logo {
@@ -163,8 +183,36 @@ header {
         display: none;
     }
 
-
     #nav-logo {
         margin-left: 0;
+    }
+
+    .home-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-image: url(./images/mobile-background-image.jpg);
+        background-size: cover;
+    }
+
+    .home-titles {
+        background-color: white;
+        border-radius: 40px;
+        width: 80vw;
+        height: 35vh;
+    }
+
+    .home-title-onload {
+        bottom: 45vh;
+    }
+
+    .home-learn-more {
+        width: 30vw;
+        margin-bottom: 5vh;
+    }
+
+    .toggle-button {
+        display: flex;
     }
 }
