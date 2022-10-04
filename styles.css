@@ -99,7 +99,6 @@ header {
 
 }
 
-
 .home-container {
     position: relative;
     margin-top: 60px;
@@ -134,7 +133,6 @@ header {
 }
 
 #home-slogan {
-    /* margin-left: 3vw; */
     margin-top: -40px;
 }
 
@@ -166,7 +164,6 @@ header {
     margin-left: 6px;
 }
 
-
 .section2 {
     padding-top: 50px;
     display: flex;
@@ -188,14 +185,16 @@ header {
     gap: 20px;
 }
 
-.about-image-portrait {
-    height: 600px;
-    justify-self: center;
-    align-self: center;
-}
-
 .about-image {
     width: 500px;
+}
+
+.about-image-portrait {
+    height: 600px;
+    width: auto;
+    justify-self: center;
+    align-self: center;
+    z-index: 5;
 }
 
 .right-section {
@@ -225,6 +224,24 @@ h2 span {
     height: 1000px;
     background-color: var(--main-color);
 }
+
+.hidden {
+    opacity: 0;
+    transition: all 1s, opacity 2s;
+}
+
+.hidden.about-image {
+    transform: translateX(-100%);
+}
+
+.show {
+    opacity: 1;
+}
+
+.show.about-image {
+    transform: translateX(0);
+}
+
 
 @media only screen and (max-width: 750px) {
     header {
