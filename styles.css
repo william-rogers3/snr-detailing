@@ -105,7 +105,9 @@ header {
     background-color: var(--main-color);
     background-image: url(./images/front-hood-buff.jpeg);
     background-repeat: no-repeat;
-    height: 920px;
+    background-size: cover;
+    min-height: 920px;
+    height: 100vh;
     opacity: 0;
     transition: .5s;
 }
@@ -140,7 +142,8 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 8vw;
+    min-width: 150px;
+    width: 8vw;
     height: 5vh;
     border-radius: 20px;
     border: none;
@@ -165,6 +168,8 @@ header {
 }
 
 .section2 {
+    display: flex;
+    justify-content: center;
     padding-top: 50px;
     display: flex;
     width: 100%;
@@ -185,11 +190,13 @@ header {
 }
 
 .about-image {
-    width: 500px;
+    max-width: 500px;
+    width: 27vw;
 }
 
 .about-image-portrait {
-    height: 600px;
+    max-height: 600px;
+    height: 31vw;
     width: auto;
     justify-self: center;
     align-self: center;
@@ -204,6 +211,7 @@ header {
     color: white;
     font-family: 'Reem Kufi Fun', sans-serif;
     padding: 50px;
+    max-width: 1000px;
 }
 
 .test {
