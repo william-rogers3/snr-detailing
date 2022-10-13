@@ -36,12 +36,8 @@
 
     <div class="section1" id="home">
         <div class="home-container">
-            <!-- <video autoplay muted loop id="video">
-                <source src="images/buffing-video.mp4" type="video/mp4">
-            </video> -->
             <div class="home-titles">
                 <img id="logo" src="./images/logo-transparent.png">
-                <!-- <img id="logo" src="/images/logo.jpeg"> -->
                 <h2 id="home-slogan">Dirty Car? Take it to S&R!</h2>
                 <a class="home-learn-more" href="#about-us">Learn More</a>
             </div>
@@ -49,30 +45,41 @@
     </div>
 
     <div class="section2" id="about-us">
-        <div class="left-section">
-            <img src="./images/mercedes-front-exterior-clean.jpeg" alt="Clean exterior of mercedes"
-                class="about-image-portrait hidden about-image">
-            <div class="stacked-images">
-                <img src="./images/logo.jpeg" alt="S&R logo" class="about-image hidden">
-                <img src="./images/silverado-exterior.jpg" alt="Clean exterior of silverado" class="about-image hidden">
+        <h2 class="small-strikethrough"><span class="section-title">About</span></h2>
+        <div class="section2-content">
+            <div class="left-section">
+                <img src="./images/mercedes-front-exterior-clean.jpeg" alt="Clean exterior of mercedes"
+                    class="about-image-portrait hidden about-image">
+                <div class="stacked-images">
+                    <img src="./images/logo.jpeg" alt="S&R logo" class="about-image hidden">
+                    <img src="./images/silverado-exterior.jpg" alt="Clean exterior of silverado"
+                        class="about-image hidden">
+                </div>
             </div>
-        </div>
 
-        <div class="right-section hidden">
-            <h2 class="test"><span>Purus sit amet volutpat consequat mauris</span></h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed lectus vestibulum. Hac habitasse
-                platea dictumst quisque. Maecenas ultricies mi eget mauris pharetra et. Proin nibh nisl condimentum id
-                venenatis a condimentum vitae. Pellentesque diam volutpat commodo sed egestas egestas fringilla
-                phasellus. Volutpat diam ut venenatis tellus in metus vulputate. Condimentum vitae sapien pellentesque
-                habitant morbi tristique. Euismod nisi porta lorem mollis aliquam ut porttitor. Nec tincidunt praesent
-                semper feugiat nibh. Tellus elementum sagittis vitae et leo duis ut diam quam. Leo in vitae turpis massa
-                sed elementum tempus egestas sed. Purus sit amet volutpat consequat mauris.</p>
+            <div class="right-section hidden">
+                <h2 class="strikethrough"><span>Purus sit amet volutpat consequat mauris</span></h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed lectus vestibulum. Hac
+                    habitasse
+                    platea dictumst quisque. Maecenas ultricies mi eget mauris pharetra et. Proin nibh nisl condimentum
+                    id
+                    venenatis a condimentum vitae. Pellentesque diam volutpat commodo sed egestas egestas fringilla
+                    phasellus. Volutpat diam ut venenatis tellus in metus vulputate. Condimentum vitae sapien
+                    pellentesque
+                    habitant morbi tristique. Euismod nisi porta lorem mollis aliquam ut porttitor. Nec tincidunt
+                    praesent
+                    semper feugiat nibh. Tellus elementum sagittis vitae et leo duis ut diam quam. Leo in vitae turpis
+                    massa
+                    sed elementum tempus egestas sed. Purus sit amet volutpat consequat mauris.</p>
+            </div>
         </div>
     </div>
 
 
     <div class="section3" id="gallery">
+        <h2 class="small-strikethrough"><span class="section-title">Gallery</span></h2>
         <div class="gallery-grid">
             <div class="grid-item">
                 <img class="gallery-image hidden" src="./images/honda-front-interior-clean.jpeg" alt="">
@@ -101,6 +108,35 @@
             </div>
             <div class="grid-item">
                 <img class="gallery-image hidden" src="./images/clean-back.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="section4" id="contact">
+        <h2 class="small-strikethrough"><span class="section-title">Contact Us</span></h2>
+
+        <div class="section4-content">
+            <div class="contact-left">
+                <h3>Get in Touch!</h3>
+                <p>Phone Number: ###-###-####<br>
+                    Email: wrrogers3@gmail.com<br>
+                    socials: <span class="socials"><span class="icon" id="instagram"></span><span class="icon" id="facebook"></span></span>
+                </p>
+                <!-- <div class="socials">
+                    <p>socials:</p>
+                    <div class="icon" id="instagram"></div>
+                    <div class="icon" id="facebook"></div>
+                </div> -->
+            </div>
+
+
+            <div class="contact-right">
+                <form>
+                    <input type="text" id="fname" name="fname" placeholder="Full Name"><br>
+                    <input type="text" id="lname" name="lname" placeholder="Email"><br>
+                    <textarea id="message" placeholder="Enter Message Here"></textarea>
+                    <input type="submit" id="confirm" value="Submit">
+                </form>
             </div>
         </div>
     </div>
