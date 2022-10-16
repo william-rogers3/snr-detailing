@@ -1,12 +1,13 @@
 :root {
     --main-color: #231F20;
     --secondary-color: #530B0D;
+    --main-font: 'Reem Kufi Fun', sans-serif;
 }
 
 * {
     padding: 0;
     margin: 0;
-    scroll-margin-top: 100px;
+    scroll-margin-top: 50px;
     scroll-behavior: smooth;
 }
 
@@ -43,7 +44,7 @@ a {
     text-decoration: none;
     color: white;
     font-weight: 100;
-    font-family: 'Reem Kufi Fun', sans-serif;
+    font-family: var(--main-font);
 }
 
 .toggle-button {
@@ -124,7 +125,7 @@ header {
     bottom: 50%;
     opacity: 0;
     position: absolute;
-    font-family: 'Reem Kufi Fun', sans-serif;
+    font-family: var(--main-font);
     font-weight: 300;
     transition: 1s;
 }
@@ -151,7 +152,7 @@ header {
     color: white;
     background-color: var(--main-color);
     cursor: pointer;
-    font-family: 'Reem Kufi Fun', sans-serif;
+    font-family: var(--main-font);
     font-weight: 300;
     font-size: 16px;
     transition: .4s;
@@ -227,7 +228,7 @@ header {
     align-items: center;
     flex-direction: column;
     color: white;
-    font-family: 'Reem Kufi Fun', sans-serif;
+    font-family: var(--main-font);
     padding: 50px;
     max-width: 1000px;
 }
@@ -291,6 +292,64 @@ h2 span {
 }
 
 .section4 {
+    height: auto;
+    padding-top: 200px;
+    background-color: var(--main-color);
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.car-type {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+.car {
+    width: 250px;
+    height: 200px;
+    background-color: white;
+    cursor: pointer;
+    transition: all .5s;
+
+}
+
+.car:hover {
+    height: 225px;
+    box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 1);
+}
+
+.pricing-packages {
+    height: 100%;
+    width: 100%;
+    background-color: var(--main-color);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 25vw);
+    justify-self: center;
+    align-items: center;
+}
+
+.pricing-card {
+    height: 300px;
+    width: 300px;
+    background-color: white;
+    transition: all .5s;
+    border: 1px black solid;
+}
+
+.pricing-card:hover {
+    height: 350px;
+    box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 1);
+}
+
+
+.section5 {
     padding-top: 100px;
     height: 600px;
     background-color: var(--main-color);
@@ -301,7 +360,7 @@ h2 span {
     align-items: center;
 }
 
-.section4-content {
+.section5-content {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -316,17 +375,32 @@ h2 span {
     width: 50%;
 }
 
+.contact-left {
+    padding-left: 10vw;
+    gap: 1vw;
+    align-items: flex-start;
+}
+
+.text {
+    font-family: var(--main-font);
+    font-weight: 300;
+    font-size: 36px;
+}
+
+
 .icon {
     height: 50px;
     width: 50px;
     background-size: cover;
     cursor: pointer;
     display: inline-block;
+    transform: translateY(15px);
 }
 
 .socials {
+    padding-left: 4vw;
     display: inline-flex;
-    gap: 20px;
+    gap: 4vw;
 }
 
 #instagram {
@@ -344,7 +418,7 @@ h2 span {
     border: none;
     font-size: 40px;
     color: white;
-    font-family: 'Reem Kufi Fun', sans-serif;
+    font-family: var(--main-font);
     font-weight: 300;
     outline: none;
     margin: 20px;
@@ -366,11 +440,16 @@ h2 span {
     margin-left: 20px;
     border: none;
     background-color: rgb(96, 96, 106);
+    min-height: 40px;
 }
 
 #confirm:hover {
     background-color: white;
     color: var(--main-color);
+}
+
+.selected {
+    background-color: green;
 }
 
 

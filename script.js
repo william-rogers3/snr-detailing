@@ -21,3 +21,17 @@ const observer = new IntersectionObserver((entries) => {
 
 const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((el) => observer.observe(el));
+
+const carElements = document.getElementsByClassName("car");
+carElements[0].classList.add("selected");
+
+for (let i = 0; i < carElements.length; i++) {
+    carElements[i].addEventListener("click", () => {
+            for (let i = 0; i < carElements.length; i++) {
+                carElements[i].classList.remove("selected");
+            }
+                carElements[i].classList.add("selected");
+            });
+    }
+
+    carElements
