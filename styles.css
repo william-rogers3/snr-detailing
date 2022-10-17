@@ -295,8 +295,8 @@ h2 span {
 }
 
 .section4 {
+    padding-top: 150px;
     height: auto;
-    padding-top: 200px;
     background-color: var(--main-color);
     gap: 20px;
     display: flex;
@@ -306,11 +306,11 @@ h2 span {
 }
 
 .car-type {
+    padding-top: 20px;
     display: flex;
     gap: 25px;
     justify-content: center;
     align-items: center;
-    height: 500px;
 }
 
 .car {
@@ -320,9 +320,34 @@ h2 span {
     cursor: pointer;
     transition: all .5s;
     background-image: url(./images/car.png);
-    background-size: cover;
+    background-size: 150px;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.selected {
+    background-color: green;
+    transform: scale(110%);
+}
+
+#small-car {
+    background-image: url(./images/car.png);
+}
+
+#sedan {
+    background-image: url(./images/sedan.png);
+}
+
+#suv {
+    background-image: url(./images/bigger-car.png);
+}
+
+#van {
+    background-image: url(./images/van.png);
+}
+
+#truck {
+    background-image: url(./images/pickup-truck.png);
 }
 
 .pricing-packages {
@@ -340,7 +365,7 @@ h2 span {
 .pricing-card {
     position: relative;
     padding: min(20px) 0;
-    height: 400px;
+    height: 425px;
     width: 300px;
     background-color: white;
     transition: all .5s;
@@ -489,11 +514,6 @@ h2 span {
     color: var(--main-color);
 }
 
-.selected {
-    background-color: green;
-    height: 225px;
-}
-
 
 footer {
     height: 50px;
@@ -619,8 +639,8 @@ footer {
     }
 
     .pricing-card {
-        height: 450px;
-        width: 450px;
+        height: 500px;
+        width: 95%;
     }
 
     .detail-type {
@@ -629,5 +649,7 @@ footer {
 
     .checkmark {
         font-size: 20px;
+        background-size: 3vw;
     }
+
 }
