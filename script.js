@@ -27,11 +27,9 @@ carElements[0].classList.add("selected");
 
 for (let i = 0; i < carElements.length; i++) {
     carElements[i].addEventListener("click", () => {
-            for (let i = 0; i < carElements.length; i++) {
-                carElements[i].classList.remove("selected");
-            }
-                carElements[i].classList.add("selected");
-            });
-    }
-
-    carElements
+        for (let i = 0; i < carElements.length; i++) {
+            carElements[i].classList.remove("selected");
+        }
+        carElements[i].classList.add("selected");
+    });
+}

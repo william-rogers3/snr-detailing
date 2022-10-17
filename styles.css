@@ -9,6 +9,7 @@
     margin: 0;
     scroll-margin-top: 50px;
     scroll-behavior: smooth;
+    font-family: var(--main-font);
 }
 
 .links {
@@ -140,13 +141,14 @@ header {
 }
 
 .home-learn-more,
-#confirm {
+#confirm,
+.book-now-btn {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 150px;
-    width: 8vw;
-    height: 5vh;
+    width: 150px;
+    height: 50px;
+    /* width: 8vw; */
     border-radius: 20px;
     border: none;
     color: white;
@@ -159,7 +161,8 @@ header {
     border: 1.5px black solid;
 }
 
-.home-learn-more:hover {
+.home-learn-more:hover,
+.book-now-btn:hover {
     background-color: white;
     color: var(--main-color);
 }
@@ -316,42 +319,75 @@ h2 span {
     background-color: white;
     cursor: pointer;
     transition: all .5s;
-
-}
-
-.car:hover {
-    height: 225px;
-    box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 1);
+    background-image: url(./images/car.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .pricing-packages {
     height: 100%;
-    width: 100%;
+    width: min(100%, 1920px);
     background-color: var(--main-color);
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 25vw);
-    justify-self: center;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(1, 25vw);
+    justify-items: center;
+    justify-content: center;
     align-items: center;
 }
 
 .pricing-card {
-    height: 300px;
+    position: relative;
+    padding: min(20px) 0;
+    height: 400px;
     width: 300px;
     background-color: white;
     transition: all .5s;
     border: 1px black solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.detail-type {
+    text-align: center;
+    position: absolute;
+    top: 10px;
 }
 
 .pricing-card:hover {
-    height: 350px;
+    border: 1px green solid;
+    scale: 1.05;
     box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 1);
 }
 
+.pricing-card:hover .book-now-btn {
+    color: white;
+    border: none;
+    background-color: green;
+}
+
+.book-now-btn {
+    position: absolute;
+    bottom: 10px;
+}
+
+.checkmark {
+    list-style: none;
+    margin-left: 20px;
+    padding: 10px 30px;
+    background-image: url("./images/green-checkmark.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 1vw;
+}
 
 .section5 {
     padding-top: 100px;
-    height: 600px;
+    min-height: 600px;
+    width: 100%;
     background-color: var(--main-color);
     color: white;
     font-size: 40px;
@@ -395,6 +431,11 @@ h2 span {
     cursor: pointer;
     display: inline-block;
     transform: translateY(15px);
+}
+
+.icon-link {
+    height: auto;
+    width: auto;
 }
 
 .socials {
@@ -450,12 +491,53 @@ h2 span {
 
 .selected {
     background-color: green;
+    height: 225px;
 }
 
+
+footer {
+    height: 50px;
+    width: 100%;
+}
+
+@media only screen and (max-width: 1870px) {
+    .pricing-packages {
+        grid-template-columns: repeat(3, 300px);
+        grid-template-rows: repeat(2, auto);
+        gap: 20px;
+
+    }
+}
 
 @media only screen and (max-width: 1600px) {
     #nav-logo {
         margin-left: 10vw;
+    }
+
+    .car-type {
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    #nav-logo {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .pricing-packages {
+        grid-template-columns: repeat(2, 300px);
+        grid-template-rows: repeat(3, auto);
+        gap: 20px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .section5-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
     }
 }
 
@@ -471,6 +553,7 @@ h2 span {
     }
 
     #nav-logo {
+        display: block;
         margin-left: 0;
     }
 
@@ -488,7 +571,8 @@ h2 span {
         background-color: white;
         border-radius: 40px;
         width: 80vw;
-        height: 5vh;
+        height: auto;
+        padding-bottom: 80px;
     }
 
     .home-title-onload {
@@ -496,11 +580,54 @@ h2 span {
     }
 
     .home-learn-more {
+        position: absolute;
+        bottom: 15px;
         width: 30vw;
-        margin-bottom: 5vh;
     }
 
     .toggle-button {
         display: flex;
+    }
+
+    .section2-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .left-section {
+        margin: 0;
+        width: auto;
+        height: auto;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .grid-item:nth-child(9) {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .pricing-packages {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, auto);
+        gap: 20px;
+    }
+
+    .pricing-card {
+        height: 450px;
+        width: 450px;
+    }
+
+    .detail-type {
+        font-size: 26px;
+    }
+
+    .checkmark {
+        font-size: 20px;
     }
 }
