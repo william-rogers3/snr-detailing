@@ -207,17 +207,17 @@ header {
 .stacked-images {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     gap: 20px;
 }
 
 .about-image {
-    max-width: 500px;
+    /* max-width: 500px; */
     width: 27vw;
 }
 
 .about-image-portrait {
-    max-height: 600px;
+    /* max-height: 600px; */
     height: 31vw;
     width: auto;
     justify-self: center;
@@ -305,6 +305,10 @@ h2 span {
     align-items: center;
 }
 
+#car-type-text {
+    color: white;
+}
+
 .car-type {
     padding-top: 20px;
     display: flex;
@@ -314,6 +318,9 @@ h2 span {
 }
 
 .car {
+    padding-top: 10px;
+    box-sizing: border-box;
+    text-align: center;
     width: 250px;
     height: 200px;
     background-color: white;
@@ -516,6 +523,9 @@ h2 span {
 
 
 footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 50px;
     width: 100%;
 }
@@ -559,9 +569,13 @@ footer {
         align-items: center;
         gap: 50px;
     }
+
+    .hide-mobile {
+        display: none;
+    }
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 800px) {
     header {
         display: flex;
         justify-content: center;
@@ -609,6 +623,14 @@ footer {
         display: flex;
     }
 
+    .about-image {
+        width: 40vw;
+    }
+
+    .about-image-portrait {
+        height: auto;
+    }
+
     .section2-content {
         flex-direction: column;
         justify-content: center;
@@ -629,9 +651,26 @@ footer {
     .grid-item:nth-child(9) {
         display: none;
     }
+
+    .car {
+        width: 200px;
+        height: 150px;
+    }
 }
 
 @media only screen and (max-width: 650px) {
+
+    .section3 {
+        padding: 0;
+    }
+
+    .car {
+        padding-top: 0px;
+        width: 125px;
+        height: 100px;
+        background-size: 80px;
+    }
+
     .pricing-packages {
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(6, auto);
@@ -639,7 +678,7 @@ footer {
     }
 
     .pricing-card {
-        height: 500px;
+        height: 515px;
         width: 95%;
     }
 
@@ -647,9 +686,30 @@ footer {
         font-size: 26px;
     }
 
+    .small-strikethrough {
+        width: 50%;
+    }
+
     .checkmark {
         font-size: 20px;
         background-size: 3vw;
     }
 
+    .icon {
+        height: 30px;
+        width: 30px;
+    }
+
+    .text,
+    #fname,
+    #lname,
+    #message {
+        font-size: 20px;
+    }
+
+    #fname:focus,
+    #lname:focus,
+    #message:focus {
+        font-size: 20px;
+    }
 }
