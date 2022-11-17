@@ -1,6 +1,6 @@
 :root {
-    --main-color: #231F20;
-    --secondary-color: #530B0D;
+    --main-color: #231f20;
+    --secondary-color: #530b0d;
     --main-font: 'Reem Kufi Fun', sans-serif;
 }
 
@@ -30,7 +30,7 @@
     height: 60px;
     width: 120px;
     cursor: pointer;
-    transition: .2s;
+    transition: 0.2s;
     font-size: 24px;
 }
 
@@ -82,13 +82,12 @@ a {
     transform: translatey(-9px) rotate(-45deg);
 }
 
-
 .toggle-button .bar {
     height: 3px;
     width: 100%;
     background-color: white;
     border-radius: 10px;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 header {
@@ -137,7 +136,7 @@ header {
     min-height: 920px;
     height: 100vh;
     opacity: 0;
-    transition: .5s;
+    transition: 0.5s;
 }
 
 .fade-in {
@@ -183,7 +182,7 @@ header {
     font-family: var(--main-font);
     font-weight: 300;
     font-size: 16px;
-    transition: .4s;
+    transition: 0.4s;
     border: 1.5px black solid;
 }
 
@@ -205,7 +204,7 @@ header {
     align-items: center;
     padding-top: 75px;
     width: 100%;
-    background-color: #231F20;
+    background-color: #231f20;
 }
 
 .section-title {
@@ -221,7 +220,7 @@ header {
     justify-content: center;
     padding-top: 50px;
     width: 100%;
-    background-color: #231F20;
+    background-color: #231f20;
 }
 
 .left-section {
@@ -277,7 +276,7 @@ header {
 
 h2 span {
     padding: 0 10px;
-    background: var(--main-color)
+    background: var(--main-color);
 }
 
 .section3 {
@@ -351,7 +350,7 @@ h2 span {
     height: 200px;
     background-color: white;
     cursor: pointer;
-    transition: all .5s;
+    transition: all 0.5s;
     background-image: url(./images/car.png);
     background-size: 150px;
     background-repeat: no-repeat;
@@ -398,10 +397,10 @@ h2 span {
 .pricing-card {
     position: relative;
     padding: min(20px) 0;
-    height: 425px;
+    height: 450px;
     width: 300px;
     background-color: white;
-    transition: all .5s;
+    transition: all 0.5s;
     border: 1px black solid;
     display: flex;
     flex-direction: column;
@@ -436,7 +435,7 @@ h2 span {
     list-style: none;
     margin-left: 20px;
     padding: 10px 30px;
-    background-image: url("./images/green-checkmark.svg");
+    background-image: url('./images/green-checkmark.svg');
     background-repeat: no-repeat;
     background-position: left center;
     background-size: 1vw;
@@ -485,7 +484,6 @@ h2 span {
     font-weight: 300;
     font-size: 36px;
 }
-
 
 .icon {
     height: 50px;
@@ -549,22 +547,27 @@ h2 span {
     color: var(--main-color);
 }
 
-
 footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20px;
+    color: white;
     height: 50px;
     width: 100%;
 }
 
+.footer-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
 
 @media only screen and (max-width: 1870px) {
     .pricing-packages {
         grid-template-columns: repeat(3, 300px);
         grid-template-rows: repeat(2, auto);
         gap: 20px;
-
     }
 }
 
@@ -640,17 +643,24 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        box-sizing: border-box;
         height: 400px;
-        right: -300px;
+        right: -100vw;
+        width: 100vw;
         top: 60px;
         gap: 0px;
         z-index: 100;
         transition: transform 1s, opacity 0s linear 2s;
     }
 
+    a.inner-link {
+        width: 100vw;
+        padding-right: 1vw;
+    }
+
     ul.links.active {
         opacity: 1;
-        transform: translateX(-206px);
+        transform: translateX(-101vw);
         transition: transform 1s, opacity 0s;
     }
 
@@ -658,7 +668,7 @@ footer {
         background-color: var(--main-color);
         margin: 0;
         height: 80px;
-        width: 200px;
+        width: 100vw;
     }
 
     .link:hover {

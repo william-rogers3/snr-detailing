@@ -1,0 +1,16 @@
+* {
+    background-color: #231f20;
+    color: white;
+}
+
+a {
+    display: block;
+}
+
+h1 {
+    text-align: center;
+}
+
+.link-container {
+    margin-top: -20px;
+}
