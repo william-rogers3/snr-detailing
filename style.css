@@ -1,0 +1,95 @@
+:root {
+    --main-color: #231f20;
+    --secondary-color: #530b0d;
+    --main-font: 'Reem Kufi Fun', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--main-color);
+}
+
+header {
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links {
+    display: none;
+}
+
+.link {
+    list-style-type: none;
+}
+
+.inner-link {
+    text-decoration: none;
+    color: black;
+}
+
+#nav-image {
+    height: 50px;
+}
+
+.toggle-button {
+    height: 21px;
+    width: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 20px;
+}
+
+.bar {
+    display: inline-block;
+    width: 100%;
+    background-color: white;
+    height: 3px;
+    border-radius: 4px;
+}
+
+#home {
+    position: absolute;
+    width: 100%;
+}
+
+#home-container {
+    opacity: 0;
+    transition: all 2s;
+}
+
+#home-background {
+    position: absolute;
+    width: 100%;
+    object-fit: cover;
+    height: 75vh;
+}
+
+.home-titles {
+    position: relative;
+    /* top: 45vh; */
+    font-size: 12px;
+    margin-left: -6px;
+    opacity: 0;
+}
+
+.home-title-onload {
+    opacity: 1;
+    transform: translateY(45vh);
+    transition: all 1s;
+}
+
+#home-container.fade-in {
+    opacity: 1;
+}
+
+#logo {
+    height: 100px;
+}
