@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S&R Detailing</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <a id="nav-logo" href="#"><img src="./images/nav-logo.png" id="nav-image"></a>
+        <nav id="navbar">
+            <ul class="links">
+                <li class="link" id="home"><a class="inner-link" href="#">Home</a></li>
+                <li class="link" id="about"><a class="inner-link" href="#about-us">About</a></li>
+                <li class="link"><a class="inner-link" href="#gallery">Gallery</a></li>
+                <li class="link"><a class="inner-link" href="#pricing">Pricing</a></li>
+                <li class="link"><a class="inner-link" href="#contact">Contact</a></li>
+            </ul>
+            <div class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="section1" id="home">
+        <div class="home-container">
+            <div class="home-titles">
+                <img id="logo" src="./images/logo-transparent.png">
+                <h2 id="home-slogan">Dirty Car? Take it to S&R!</h2>
+                <a class="home-learn-more" href="#about-us">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="section2" id="about-us">
+        <h2 class="small-strikethrough"><span class="section-title">About</span></h2>
+        <div class="section2-content">
+            <div class="left-section">
+                <img src="./images/mercedes-front-exterior-clean.jpeg" alt="Clean exterior of mercedes"
+                    class="about-image-portrait hidden about-image">
+                <div class="stacked-images">
+                    <img src="./images/logo.jpeg" alt="S&R logo" class="about-image hidden">
+                    <img src="./images/silverado-exterior.jpg" alt="Clean exterior of silverado"
+                        class="about-image hidden">
+                </div>
+            </div>
+
+            <div class="right-section hidden">
+                <h2 class="strikethrough"><span>Car Detailing is an Art Form</span></h2>
+                <p>SNR Detailing is a professional auto detailing service that offers top-quality car cleaning and
+                    restoration services for car owners in the greater Houston area. The company is led by William
+                    Rogers, a highly skilled and experienced auto detailing professional who takes pride in providing
+                    his clients with exceptional service.
+
+                    At SNR Detailing, the team is dedicated to ensuring that your car looks and feels like new again.
+                    Whether you need a basic wash or a complete interior and exterior detailing, SNR Detailing has the
+                    expertise and equipment to get the job done right. They use only the highest-quality products and
+                    techniques to clean and restore your vehicle to its original condition.
+
+                    In addition to their standard detailing services, SNR Detailing also offers a range of specialty
+                    services, including paint correction, ceramic coating, and paint protection film installation. These
+                    services are designed to provide your car with long-lasting protection and a showroom-quality
+                    finish.
+
+                    At SNR Detailing, customer satisfaction is their top priority. They strive to deliver exceptional
+                    service and exceed their clients' expectations on every job. If you're looking for a reliable and
+                    professional auto detailing service in Houston, look no further than SNR Detailing.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section3" id="gallery">
+        <h2 class="small-strikethrough"><span class="section-title">Gallery</span></h2>
+        <div class="gallery-grid">
+            <div class="grid-item">
+                <img class="gallery-image hidden" src="./images/honda-front-interior-clean.jpeg" alt="">
+            </div>
+            <div class="grid-item">
+                <img class="gallery-image hidden" src="./images/mazda-front-interior-clean.jpeg" alt="">
+
+            </div>
+            <div class="grid-item">
+                <img class="gallery-image hidden" src="./images/toyota-back-interior-clean.jpeg" alt="">
+            </div>
+            <div class="grid-item">
+                <img class="gallery-image hidden" src="./images/toyota-front-exterior.jpeg" alt="">
+            </div>
+            <div class="grid-item">
+                <img class="gallery-image hidden" src="./images/clean-cupholder.jpg" alt="">
+            </div>
+            <div class="grid-item">
+                <img class="gallery-image hidden" src="./images/truck-front-clean.JPG" alt="">
+            </div>
+            <div class="grid-item">
+                <img class="gallery-image hidden" src="./images/mercedes-front-interior-clean.JPG" alt="">
+            </div>
+            <div class="grid-item">
+                <img class="gallery-image hidden" src="./images/ford-front-exterior-clean.jpg" alt="">
+            </div>
+            <div class="grid-item">
+                <img class="gallery-image hidden" src="./images/clean-back.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="section4" id="pricing">
+        <h2 class="small-strikethrough"><span class="section-title">Pricing</span></h2>
+        <p id="car-type-text">Please Select what type of we will be detailing.</p>
+
+        <div class="car-type">
+            <div id="small-car" class="car">Car</div>
+            <div id="sedan" class="car">Sedan</div>
+            <div id="suv" class="car">SUV</div>
+            <div id="van" class="car">Van / Large SUV</div>
+            <div id="truck" class="car">Truck</div>
+        </div>
+        <div class="pricing-packages">
+            <div class="pricing-card">
+                <h3 class="detail-type">Basic Exterior<br><span class="price">$59.99+</span></h3>
+                <ul>
+                    <li class="checkmark">Wash</li>
+                    <li class="checkmark">Wax</li>
+                    <li class="checkmark">Wheel/Tire Clean</li>
+                    <li class="checkmark">Windows</li>
+                </ul>
+                <a class="book-now-btn" href="mailto:snrdetailingllc@gmail.com?subject=Basic Exterior">Book Now!</a>
+            </div>
+            <div class="pricing-card">
+                <h3 class="detail-type">Basic Interior<br><span class="price">$69.99+</span></h3>
+                <ul>
+                    <li class="checkmark">Vacuum</li>
+                    <li class="checkmark">Plastic Shine</li>
+                    <li class="checkmark">Interior Windows</li>
+                    <li class="checkmark">Basic Stain Removal</li>
+                </ul>
+                <a class="book-now-btn" href="mailto:snrdetailingllc@gmail.com?subject=Basic Interior">Book Now!</a>
+            </div>
+            <div class="pricing-card">
+                <h3 class="detail-type">Basic In-and-Out<br><span class="price">$119.99+</span></h3>
+                <ul>
+                    <li class="checkmark">Wash</li>
+                    <li class="checkmark">Wax</li>
+                    <li class="checkmark">Wheel/Tire Clean</li>
+                    <li class="checkmark">Windows</li>
+                    <li class="checkmark">Vacuum</li>
+                    <li class="checkmark">Plastic Shine</li>
+                    <li class="checkmark">Interior Windows</li>
+                    <li class="checkmark">Basic Stain Removal</li>
+                </ul>
+                <a class="book-now-btn" href="mailto:snrdetailingllc@gmail.com?subject=Basic In-and-Out">Book Now!</a>
+
+            </div>
+            <div class="pricing-card">
+                <h3 class="detail-type">Premium Interior<br>Custom Quote</h3>
+
+                <ul>
+                    <li class="checkmark">Vacuum</li>
+                    <li class="checkmark">Plastic Shine</li>
+                    <li class="checkmark">Interior Windows</li>
+                    <li class="checkmark">Premium Stain Removal</li>
+                    <li class="checkmark">Shampoo Extraction</li>
+                    <li class="checkmark">Upholstery + Headliner Deep Cleaning</li>
+                    <li class="checkmark">Pet Hair Removal</li>
+                </ul>
+                <a class="book-now-btn" href="mailto:snrdetailingllc@gmail.com?subject=Premium Interior">Book Now!</a>
+            </div>
+            <div class="pricing-card">
+                <h3 class="detail-type">Premium Exterior<br><span class="price">$89.99+</span></h3>
+
+                <ul>
+                    <li class="checkmark">Wash</li>
+                    <li class="checkmark">Wax</li>
+                    <li class="checkmark">Wheel/Tire Clean</li>
+                    <li class="checkmark">Windows</li>
+                    <li class="checkmark">Undercarriage Cleaning</li>
+                    <li class="checkmark">Advanced Bug Removal</li>
+                    <li class="checkmark">Trim Shine</li>
+                </ul>
+                <a class="book-now-btn" href="mailto:snrdetailingllc@gmail.com?subject=Premium Exterior">Book Now!</a>
+            </div>
+            <div class="pricing-card">
+                <h3 class="detail-type">Premium In-and-Out<br>Custom Quote</h3>
+                <ul>
+                    <li class="checkmark">Basic In-and-Out</li>
+                    <li class="checkmark">Undercarriage Cleaning</li>
+                    <li class="checkmark">Advanced Bug Removal</li>
+                    <li class="checkmark">Trim Shine</li>
+                    <li class="checkmark">Premium Stain Removal</li>
+                    <li class="checkmark">Shampoo Extraction</li>
+                    <li class="checkmark">Upholstery + Headliner Deep Cleaning</li>
+                    <li class="checkmark">Pet Hair Removal</li>
+                </ul>
+                <a class="book-now-btn" href="mailto:snrdetailingllc@gmail.com?subject=Premium In-and-Out">Book Now!</a>
+
+            </div>
+        </div>
+
+
+        <div class="section5" id="contact">
+            <h2 class="small-strikethrough"><span class="section-title">Contact</span></h2>
+
+            <div class="section5-content">
+                <div class="contact-left">
+                    <div class="inner-contact-left">
+                        <h5 class="text">Get in Touch!</h5>
+                        <p class="text">Phone Number: (216) - 577 - 8273</p>
+                        <p class="text">Email: snrdetailingllc@gmail.com</p>
+                        <p class="text">Socials: <span class="socials">
+                                <a class="icon-link" href="https://www.instagram.com/snr_detail/" target="_blank">
+                                    <span class="icon" id="instagram"></span>
+                                </a>
+                                <a class="icon-link" href="#" target="_blank">
+                                    <span class="icon" id="facebook"></span>
+                                </a>
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="contact-right">
+                    <form>
+                        <input type="text" class="input-text" id="fname" name="fname" placeholder="Full Name"><br>
+                        <input type="text" class="input-text" id="lname" name="lname" placeholder="Email"><br>
+                        <textarea id="message" class="input-text" placeholder="Enter Message Here"></textarea>
+                        <input type="submit" id="confirm" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="footer-container">
+                <p>Copyright © 2022 S&R Detailing, LLC</p>
+                <a href="./Credits/credits.html" id="credits">Credits</a>
+            </div>
+        </footer>
+</body>
+
+</html>
