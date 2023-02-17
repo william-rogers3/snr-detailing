@@ -5,3 +5,8 @@ setTimeout(function () {
     const homeContainer = document.querySelector("#home-container");
     homeContainer.classList.add("fade-in");
 }, 1);
+
+
+
+let vh = window.innerHeight * 1;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
