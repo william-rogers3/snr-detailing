@@ -10,10 +10,12 @@
     padding: 0;
     box-sizing: border-box;
     font-family: var(--main-font);
+    color: white;
 }
 
 body {
     background-color: var(--main-color);
+    padding-bottom: 1000px;
 }
 
 header {
@@ -149,11 +151,9 @@ h2 {
     text-align: center;
 }
 
-
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    /* margin: 3.4vw; */
     grid-template-rows: auto;
     gap: 3.4vw;
 }
@@ -162,4 +162,81 @@ h2 {
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+
+#pricing>.small-strikethrough {
+    margin: calc(.05 * var(--vh)) 0 0 0;
+}
+
+#car-type-text {
+    display: block;
+    text-align: center;
+    margin-bottom: calc(.05 * var(--vh));
+}
+
+.car-type {
+    margin: 0 calc(.0125 * var(--vh));
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: calc(.0125 * var(--vh));
+}
+
+.car:nth-child(-1n + 3) {
+    grid-column: span 4;
+}
+
+.car:nth-last-child(2) {
+    grid-row-start: 2;
+    grid-column: 3 / span 4;
+}
+
+.car:nth-last-child(1) {
+    grid-row-start: 2;
+    grid-column: 7 / span 4;
+}
+
+.car {
+    height: 100px;
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#small-car {
+    background-image: url(./images/car.png);
+}
+
+#sedan {
+    background-image: url(./images/sedan.png);
+}
+
+#suv {
+    background-image: url(./images/bigger-car.png);
+}
+
+#van {
+    background-image: url(./images/van.png);
+}
+
+#truck {
+    background-image: url(./images/pickup-truck.png);
+}
+
+.pricing-packages {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: calc(.0125 * var(--vh));
+    justify-items: center;
+}
+
+.pricing-card {
+    width: 50vw;
+}
+
+.pricing-card>ul {
+    list-style-type: none;
 }
