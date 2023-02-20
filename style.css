@@ -15,7 +15,7 @@
 
 body {
     background-color: var(--main-color);
-    padding-bottom: 1000px;
+    position: relative;
 }
 
 header {
@@ -228,15 +228,132 @@ h2 {
 
 .pricing-packages {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-gap: calc(.0125 * var(--vh));
     justify-items: center;
+    margin: calc(.0125 * var(--vh)) 0;
 }
 
 .pricing-card {
-    width: 50vw;
+    width: 90vw;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .pricing-card>ul {
-    list-style-type: none;
+    list-style-image: url(./images/green-checkmark.svg);
+}
+
+.detail-type {
+    text-align: center;
+}
+
+.detail-type,
+.price,
+.checkmark {
+    color: black;
+}
+
+.checkmark {
+    width: 40vw;
+}
+
+.checkmark::marker {
+    font-size: 36px;
+}
+
+.book-now-btn {
+    height: 50px;
+    width: 150px;
+    border-radius: 10px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: calc(.0125 * var(--vh)) 0;
+    transition: all .25s;
+}
+
+.section5 {
+    padding: 0 0 calc(.1 * var(--vh)) 0;
+}
+
+.contact-left {
+    display: flex;
+    justify-content: center;
+    margin-bottom: calc(.06 * var(--vh));
+}
+
+.contact-left>form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+}
+
+#submit {
+    height: 50px;
+    width: 150px;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    border: none;
+    margin: calc(.03 * var(--vh)) 0;
+}
+
+input,
+textarea {
+    display: block;
+    width: 50vw;
+    margin-bottom: calc(.0125* var(--vh));
+    color: black;
+    border-radius: 0;
+    border: none;
+}
+
+textarea {
+    margin-bottom: 0;
+}
+
+label {
+    align-self: flex-start;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-right {
+    display: flex;
+    justify-content: center;
+    margin-bottom: calc(.06 * var(--vh));
+}
+
+.icon-link {
+    display: flex;
+}
+
+.icon {
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+}
+
+@media (min-width: 720px) {
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+        margin: 0 calc(.025 * var(--vh));
+        grid-gap: calc(.025 * var(--vh));
+    }
 }
