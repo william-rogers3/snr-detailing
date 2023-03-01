@@ -18,6 +18,10 @@ body {
     position: relative;
 }
 
+body.overflow-blocked {
+    overflow: hidden;
+}
+
 header {
     display: flex;
     height: 50px;
@@ -56,12 +60,36 @@ h2 {
     margin-right: 20px;
 }
 
+.content-container {
+    transition: .4s all;
+}
+
+.content-container.active {
+    opacity: 0;
+}
+
 .bar {
     display: inline-block;
     width: 100%;
     background-color: white;
     height: 3px;
     border-radius: 4px;
+    transition: .4s all;
+}
+
+.bar.active:nth-child(1) {
+    rotate: 135deg;
+    translate: 0 9px;
+}
+
+.bar.active:nth-child(2) {
+    opacity: 0;
+    rotate: 135deg;
+}
+
+.bar.active:nth-child(3) {
+    translate: 0 -9px;
+    rotate: -135deg;
 }
 
 #home {
