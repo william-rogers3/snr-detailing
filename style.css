@@ -23,10 +23,14 @@ body.overflow-blocked {
 }
 
 header {
-    display: flex;
-    height: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     justify-content: space-between;
-    align-items: center;
+}
+
+#nav-logo {
+    align-self: flex-start;
+    height: calc((50 / 600) * var(--vh));
 }
 
 h2 {
@@ -34,30 +38,49 @@ h2 {
     text-align: center;
 }
 
+nav {
+    justify-content: center;
+    grid-column: 1 / span 2;
+    height: 0;
+}
+
 .links {
-    display: none;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    flex-direction: column;
+    transition: all .5s;
+    z-index: 100;
+}
+
+.links.active {
+    opacity: 1;
 }
 
 .link {
     list-style-type: none;
+    z-index: 100;
+    font-size: 36px;
 }
 
 .inner-link {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 #nav-image {
-    height: 50px;
+    height: 100%;
 }
 
 .toggle-button {
     height: 21px;
     width: 30px;
+    justify-self: flex-end;
+    align-self: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-right: 20px;
+    margin-right: calc((20 / 844) * var(--vh));
 }
 
 .content-container {
@@ -114,7 +137,6 @@ h2 {
 
 .home-titles {
     position: relative;
-    /* top: 45vh; */
     font-size: 12px;
     margin-left: -6px;
     opacity: 0;
@@ -190,6 +212,15 @@ h2 {
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+
+.hidden {
+    opacity: 0;
+    transition: all .5s, opacity 1s;
+}
+
+.show {
+    opacity: 1;
 }
 
 #pricing>.small-strikethrough {
