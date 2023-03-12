@@ -1,4 +1,7 @@
 function toggleMenu() {
+    if (window.innerWidth > 768) {
+        return;
+    }
     const contentContainer = document.querySelector(".content-container");
     const links = document.querySelector(".links");
     const bars = document.getElementsByClassName("bar");
@@ -26,7 +29,7 @@ const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
             entry.target.classList.add("show");
-        } 
+        }
         // else {
         //     entry.target.classList.remove("show");
         // }

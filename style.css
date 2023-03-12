@@ -410,9 +410,76 @@ footer {
 }
 
 @media (min-width: 720px) {
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: calc((50 / 600) * var(--vh));
+    }
+
+    .section-title,
+    .strikethrough {
+        font-size: 1.8vw;
+    }
+
+    #nav-logo {
+        position: absolute;
+        left: 0;
+    }
+
+    nav {
+        height: auto;
+        justify-content: center;
+    }
+
+    .links {
+        opacity: 1;
+        flex-direction: row;
+        gap: calc((100 / 1905) * var(--vh))
+    }
+
+    .link {
+        font-size: 1.3vw;
+        width: 100px;
+    }
+
+    .inner-link {
+        font-size: calc(26px / 100vw);
+        width: 100%;
+    }
+
+    .section2-content {
+        flex-direction: row;
+    }
+
+    .about-image {
+        width: 25vw;
+    }
+
+    .about-image-portrait {
+        height: calc((25vw / 1.81313869) + (25vw / 1.90909091) + .0125 * var(--vh));
+    }
+
+    .about-paragraph {
+        font-size: 1vw
+    }
+
     .gallery-grid {
         grid-template-columns: repeat(3, 1fr);
         margin: 0 calc(.025 * var(--vh));
         grid-gap: calc(.025 * var(--vh));
+    }
+
+    .toggle-button {
+        display: none;
+    }
+
+    .pricing-packages {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pricing-card {
+        width: 100%;
+        padding: calc((100 / 1905) * var(--vh));
     }
 }
