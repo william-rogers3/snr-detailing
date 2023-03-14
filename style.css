@@ -121,7 +121,6 @@ nav {
 
 #home {
     position: absolute;
-    height: calc(.75 * var(--vh));
     height: var(--vh);
     width: 100%;
 }
@@ -317,6 +316,7 @@ nav {
 
 .detail-type {
     text-align: center;
+    font-weight: 400;
 }
 
 .detail-type,
@@ -342,6 +342,7 @@ nav {
     justify-content: center;
     align-items: center;
     margin: calc(.0125 * var(--vh)) 0;
+    margin: calc(.0075 * var(--vh)) 0;
     transition: all .25s;
 }
 
@@ -441,11 +442,14 @@ footer {
     }
 
     nav {
-        height: auto;
+        height: 100%;
+        display: flex;
         justify-content: center;
+        align-items: center;
     }
 
     .links {
+        height: 100%;
         opacity: 1;
         flex-direction: row;
         gap: calc((100 / 1905) * var(--vh))
@@ -453,11 +457,34 @@ footer {
 
     .link {
         font-size: 1.3vw;
-        width: 100px;
+        width: 100%;
+        height: 100%;
+        animation: .5s all;
+        display: flex;
+        align-items: center;
     }
 
     .inner-link {
         font-size: calc(26px / 100vw);
+        width: calc(26px / 100vw);
+        text-align: center;
+        border-bottom: 1px solid transparent;
+        animation: .3s;
+        position: relative;
+    }
+
+    .inner-link::after {
+        content: "";
+        display: block;
+        height: 0%;
+        width: 0%;
+        border: 0px solid transparent;
+        position: absolute;
+        transition: .3s all;
+    }
+
+    .inner-link:hover::after {
+        border: 1px solid white;
         width: 100%;
     }
 
@@ -495,7 +522,7 @@ footer {
     }
 
     .car-type {
-        width: 50%;
+        width: 55%;
     }
 
     .pricing-packages {
