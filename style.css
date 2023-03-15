@@ -294,7 +294,7 @@ nav {
     grid-template-columns: repeat(1, 1fr);
     grid-gap: calc(.0125 * var(--vh));
     justify-items: center;
-    margin: calc(.0125 * var(--vh)) 0;
+    /* margin: calc(.0125 * var(--vh)) 0; */
 }
 
 .pricing-card {
@@ -365,49 +365,114 @@ svg {
 }
 
 .section5 {
+    min-height: calc(1 * var(--vh));
     padding: 0 0 calc(.1 * var(--vh)) 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("./images/contact-background.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.section5-content {
+    position: relative;
+    background-color: white;
+    width: 80%;
+    /* height: calc(.5 * var(--vh)); */
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-contact-left {
+    width: 80%;
 }
 
 .contact-left {
+    /* width: 100%; */
     display: flex;
     justify-content: center;
-    margin-bottom: calc(.06 * var(--vh));
+    background-color: var(--main-color);
+    background-color: transparent;
+    /* margin-bottom: calc(.06 * var(--vh)); */
+    border-radius: 5px;
 }
 
-.contact-left>form {
+.text {
+    /* color: black; */
+    text-align: center;
+}
+
+.contact-right > form {
+    position: relative;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50vw;
+    gap: 5vmin;
 }
 
 #submit {
-    height: 50px;
-    width: 150px;
+    height: 15vmin;
+    width: 50vmin;
     border-radius: 10px;
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
     border: none;
-    margin: calc(.03 * var(--vh)) 0;
+    /* margin: calc(.03 * var(--vh)) 0; */
 }
 
 input,
 textarea {
+    font-size: 22px;
     display: block;
-    width: 50vw;
+    width: 80%;
     margin-bottom: calc(.0125* var(--vh));
     color: black;
     border-radius: 0;
     border: none;
-}
-
-textarea {
-    margin-bottom: 0;
+    border-bottom: 1px solid lightgray;
+    resize: none;
 }
 
 label {
+    position: relative;
     align-self: flex-start;
+    font-size: 22px;
+    color: black;
+    width: 50%;
+}
+
+.contact-right {
+    display: flex;
+    justify-content: center;
+    /* margin-bottom: calc(.06 * var(--vh)); */
+    font-size: 22px;
+    width: 80vw;
+    height: 100%;
+    padding: 5vmin;
+}
+
+.inner-contact-right {
+    width: 80vw;
+}
+
+.icon-link {
+    display: flex;
+}
+
+.icon {
+    position: absolute;
+    bottom: 7.5%;
+    left: 2.5%;
+    height: 25px;
+    width: 25px;
+    display: block;
+    background-color: black;
 }
 
 footer {
@@ -419,22 +484,6 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.contact-right {
-    display: flex;
-    justify-content: center;
-    margin-bottom: calc(.06 * var(--vh));
-}
-
-.icon-link {
-    display: flex;
-}
-
-.icon {
-    height: 25px;
-    width: 25px;
-    display: inline-block;
 }
 
 @media (min-width: 720px) {
