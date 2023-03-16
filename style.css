@@ -390,6 +390,10 @@ svg {
     width: 80%;
 }
 
+.inner-contact-left>p {
+    padding-bottom: 5vmin;
+}
+
 .contact-left {
     /* width: 100%; */
     display: flex;
@@ -405,7 +409,7 @@ svg {
     text-align: center;
 }
 
-.contact-right > form {
+.contact-right>form {
     position: relative;
     width: 100%;
     height: 100%;
@@ -423,7 +427,7 @@ svg {
     background-color: black;
     color: white;
     border: none;
-    /* margin: calc(.03 * var(--vh)) 0; */
+    cursor: pointer;
 }
 
 input,
@@ -438,6 +442,36 @@ textarea {
     border-bottom: 1px solid lightgray;
     resize: none;
 }
+
+.checkboxes {
+    width: 80%;
+}
+
+.checkbox-paragraph {
+    color: gray;
+}
+
+.checkbox-item {
+    width: auto;
+    display: flex;
+    align-items: center;
+    gap: 1vmin;
+}
+
+.checkbox {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+
+.checkbox-label {
+    width: 100%;
+    display: inline-block;
+    color: gray;
+}
+
 
 label {
     position: relative;
@@ -593,5 +627,21 @@ footer {
 
     .pricing-card {
         width: 100%;
+    }
+
+    .inner-contact-left>p {
+        text-align: center;
+    }
+
+    #submit {
+        position: relative;
+        border: 1px var(--main-color) solid;
+        transition: all .3s ease;
+        height: 10vmin;
+    }
+
+    #submit:hover {
+        background-color: white;
+        color: black;
     }
 }
